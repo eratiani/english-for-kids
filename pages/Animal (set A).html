@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styleCards.css" />
+    <link rel="stylesheet" href="css/responsivepages.css" />
+  </head>
+
+  <body>
+    <div class="mainContainer">
+      <header class="header">
+        <div class="togglerBtn">
+          <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider round"></span>
+          </label>
+        </div>
+        <div class="overlay hidden"></div>
+        <nav class="navBurger closed">
+          <ul class="headerUlNav">
+            <li class="headerLi">
+              <a href="../index.html" class="headerA">Main</a>
+            </li>
+            <li class="headerLi">
+              <a href="Action (set A).html" class="headerA">Action (set A)</a>
+            </li>
+            <li class="headerLi">
+              <a href="Action (set B).html" class="headerA">Action (set B)</a>
+            </li>
+            <li class="headerLi">
+              <a href="Animal (set A).html" class="headerA" data-type="active"
+                >Animal (set A)</a
+              >
+            </li>
+            <li class="headerLi">
+              <a href="Animal (set B).html" class="headerA">Animal (set B)</a>
+            </li>
+            <li class="headerLi">
+              <a href="Clothes.html" class="headerA">Clothes</a>
+            </li>
+            <li class="headerLi">
+              <a href="Emotions.html" class="headerA">Emotions</a>
+            </li>
+            <li class="headerLi">
+              <a href="Places.html" class="headerA">Planets</a>
+            </li>
+            <li class="headerLi">
+              <a href="For Fun.html" class="headerA">For Fun</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <div class="burger-brick first"></div>
+          <div class="burger-brick middle"></div>
+          <div class="burger-brick last"></div>
+        </div>
+      </header>
+      <section class="sec_1">
+        <h1 class="sec_1header" data-type="animalA">Train And Play</h1>
+        <div class="cardsContainer"></div>
+      </section>
+      <div>
+        <input class="play display" type="button" value="play" />
+        <audio class="audio" controls>
+          <source
+            class="sounds"
+            src="../assets/audio/angry.mp3"
+            type="audio/ogg"
+          />
+        </audio>
+      </div>
+    </div>
+
+    <script type="module" src="js/cards.js"></script>
+    <script type="module" src="js/audio.js"></script>
+    <script src="js/slider.js"></script>
+  </body>
+</html>

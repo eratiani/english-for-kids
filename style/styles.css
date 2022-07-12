@@ -1,0 +1,206 @@
+.header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+/******************************************************************** navigation******************************************************* */
+.closed {
+  transform: translateY(-5000px);
+}
+
+.navBurger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1.5s ease-in-out;
+  width: 320px;
+  height: auto;
+  background-color: #292929;
+  padding: 10px;
+}
+
+.headerUlNav {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 243px;
+}
+
+.headerUlNav li a {
+  width: 100%;
+  font-size: 29px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  display: block;
+  text-decoration: none;
+  color: #cdcdcd;
+  margin-top: 40px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 2s;
+}
+
+.headerUlNav :first-child :first-child {
+  border-bottom: 3px solid #f1cdb3;
+}
+
+.headerUlNav li a:hover {
+  border-bottom: 3px solid #f1cdb3;
+}
+
+.headerUlNav li a:focus {
+  border-bottom: 3px solid #f1cdb3;
+}
+
+/******************************************************************** navigation******************************************************* */
+/******************************************************************** burger******************************************************* */
+.burger {
+  width: 33px;
+  /* position: absolute;
+    left: 0;
+    top: 33px; */
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10000;
+}
+
+.burger-brick {
+  height: 4px;
+  width: 33px;
+  background-color: rgb(132, 127, 127);
+  margin-top: 6px;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.bgChanger {
+  background-color: rgb(213, 211, 211);
+}
+
+.open .first {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-top: 14px;
+  width: 33px;
+}
+
+.open .last {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-top: -4px;
+  width: 33px;
+  margin-left: 13px;
+}
+
+.open .middle {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-top: -4px;
+  width: 33px;
+  margin-left: -13px;
+}
+
+/******************************************************************** burger******************************************************* */
+/******************************************************************** slider button******************************************************* */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  margin: 10px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/******************************************************************** slider button******************************************************* */
+/******************************************************************** overlay******************************************************* */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(226, 226, 226, 0.495);
+  width: 100%;
+}
+
+/******************************************************************** overlay******************************************************* */
+.cardsContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+}
+.cardsContainer a img {
+  max-width: 300px;
+}
