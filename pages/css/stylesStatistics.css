@@ -1,0 +1,22 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+.mainContainer ul {
+    display: flex;
+    flex-direction: row;
+}
+.mainContainer ul li {
+    margin: 5px;
+    list-style: none;
+}
+.insideUl {
+    display: flex;
+}
+th {
+    border: 2px solid black;
+}
+td {
+    padding: 10px;
+    border: 1px solid black;
+}
