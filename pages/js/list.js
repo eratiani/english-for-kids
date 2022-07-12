@@ -6,6 +6,8 @@ export const cards = [
     "Animal (set B)",
     "Clothes",
     "Emotions",
+    "Planets",
+    "For Fun",
   ],
   [
     {
@@ -408,4 +410,4 @@ export const cards = [
     },
   ],
 ];
-// export default cards2;
+// //////////////////////////////////////// cards file/////////////////////////////

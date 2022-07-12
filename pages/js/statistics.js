@@ -15,7 +15,6 @@ tHead.forEach((e) => {
 });
 cards.forEach((e) => {
   for (let i = 0; i < 8; i++) {
-    console.log(cards[1][i]);
     everyCard[number2].textContent = `${cards[number3][i]["word"]}`;
     everyCardTranslation[
       number2

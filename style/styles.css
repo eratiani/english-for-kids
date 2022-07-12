@@ -204,3 +204,10 @@ input:checked + .slider:before {
 .cardsContainer a img {
   max-width: 300px;
 }
+.display {
+  opacity: 0;
+}
+body {
+  background-image: url(../assets/bgImg/ivan-diaz-kVMlaIjY6RI-unsplash.jpg);
+  background-size: cover;
+}

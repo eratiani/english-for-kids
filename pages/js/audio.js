@@ -1,10 +1,13 @@
-/////////////////////////////////////////////////// temp card obj/////////////////////////////
+/////////////////////////////////////////////////// import expoer/////////////////////////////
 import { cards } from "./list.js";
 export const source = document.querySelector(".sounds");
 export const audio = document.querySelector(".audio");
 export const imgOnpage = document.querySelectorAll("img");
-/////////////////////////////////////////////////// temp card obj/////////////////////////////
+/////////////////////////////////////////////////// import export/////////////////////////////
+////////////////////////////////////////////////////////// audio for hover efect on cards////////////////////////////////////////////
 let playBtn = document.querySelector(".play");
+let clickArray = [];
+let clickObj = {};
 
 playBtn.addEventListener("click", () => {
   cards[1].forEach((audio) => {
@@ -13,8 +16,14 @@ playBtn.addEventListener("click", () => {
     audio.play();
   });
 });
-function audioSrcChecker(elementDataset, elsource) {
+function audioSrcChecker(elementDataset, elsource, elName) {
+  hoverCount++;
   if (elementDataset === elsource) {
+    clickObj = {
+      elName: hoverCount,
+    };
+    clickArray.push(clickObj);
+
     source.src = `../assets/${elsource}`;
     audio.load();
     audio.play();
@@ -22,6 +31,8 @@ function audioSrcChecker(elementDataset, elsource) {
 }
 ////////////////////
 let count = 0;
+//////////////////////////////////////// check which page it is and distribute audio///////////////////////////////////
+let hoverCount = 0;
 for (let i = 1; i < cards.length; i++) {
   const cardType = document.querySelector(".sec_1header");
 
@@ -32,7 +43,11 @@ for (let i = 1; i < cards.length; i++) {
 
       imgOnpage.forEach((img) => {
         img.addEventListener("mouseover", () => {
-          audioSrcChecker(img.dataset.audio, element["audioSrc"]);
+          audioSrcChecker(
+            img.dataset.audio,
+            element["audioSrc"],
+            element["word"]
+          );
         });
       });
       i++;

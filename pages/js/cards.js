@@ -5,6 +5,7 @@ import { ElementBuilder } from "./utility.js";
 import { CardBuilder } from "./utility.js";
 import { creaCard } from "./utility.js";
 import { count } from "./utility.js";
+export const cardType = document.querySelector(".sec_1header");
 /////////////////////////////////////////////////// import obj/////////////////////////////
 
 /////////////////////////////////////////////////burger//////////////////////////////////////////////////////////
@@ -61,7 +62,6 @@ burgerItems.forEach((item) => {
 /////////////////////////////////////////////////cards//////////////////////////////////////////////////////////
 
 for (let i = 1; i < cards.length; i++) {
-  const cardType = document.querySelector(".sec_1header");
   cardsContainer.innerHTML = "";
   for (let element of cards[i]) {
     if (cardType.dataset.type === "actionA") {

@@ -283,3 +283,7 @@ input:checked + .slider:before {
   width: 30px;
   height: 30px;
 }
+body {
+  background-image: url(../assets/bgImg/willian-justen-de-vasconcellos-KqpDuf1i83w-unsplash.jpg);
+  background-size: cover;
+}
