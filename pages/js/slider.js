@@ -54,12 +54,12 @@ playBtn.addEventListener("click", () => {
       console.log(z);
       console.log(x);
       if (z.slice(z.length - x.length) === x) {
-        source2.src = "../../assets/audio/success.mp3";
+        source2.src = "../assets/audio/success.mp3";
         audio2.load();
         audio2.play();
         const succesImg = new ElementBuilder("img")
           .addClass("successImg")
-          .setAttribute("src", `../../assets/img/success.jpg`)
+          .setAttribute("src", `../assets/img/success.jpg`)
           .getElement();
         prizes.append(succesImg);
         img.parentElement.parentElement.parentElement.classList.toggle(
@@ -69,12 +69,12 @@ playBtn.addEventListener("click", () => {
         number = randomNumArray[counterNumber];
         randomAudio(number);
       } else {
-        source2.src = "../../assets/audio/error.mp3";
+        source2.src = "../assets/audio/error.mp3";
         audio2.load();
         audio2.play();
         const errorImg = new ElementBuilder("img")
           .addClass("errorImg")
-          .setAttribute("src", `../../assets/img/failure.jpg`)
+          .setAttribute("src", `../assets/img/failure.jpg`)
           .getElement();
         prizes.append(errorImg);
       }
